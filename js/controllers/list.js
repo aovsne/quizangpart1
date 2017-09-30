@@ -5,11 +5,18 @@
 	function listController($scope){
 		$scope.data = turtlesData;
 		$scope.activeTurtle = {};
-		$scope.changeActiveTurtle = changeActiveTurtle
+        $scope.search = '';
+        $scope.quizActive = false
+        $scope.activateQuiz = activateQuiz
+		$scope.changeActiveTurtle = changeActiveTurtle;
 
 		function changeActiveTurtle(index){
-			$scope.activeTurtle = index
+			$scope.activeTurtle = index;
 		}
+
+        function activateQuiz(){
+            $scope.quizActive = true
+        }
 	}
 
 	var turtlesData = [
