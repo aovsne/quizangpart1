@@ -3,11 +3,11 @@
 	tutu.controller('listCtrl', listController)
 
 	function listController($scope){
+        $scope.quizActive = false;
 		$scope.data = turtlesData;
 		$scope.activeTurtle = {};
-        $scope.search = '';
-        $scope.quizActive = false
         $scope.activateQuiz = activateQuiz
+        $scope.search = '';
 		$scope.changeActiveTurtle = changeActiveTurtle;
 
 		function changeActiveTurtle(index){
@@ -17,6 +17,7 @@
         function activateQuiz(){
             $scope.quizActive = true
         }
+
 	}
 
 	var turtlesData = [
